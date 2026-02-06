@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy Rose Day ❤️</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle, #ffb6c1, #ff8fab);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+    }
+
+    .center-text {
+      position: absolute;
+      text-align: center;
+      z-index: 5;
+      animation: fadeOut 2s ease forwards;
+      animation-delay: 6s;
+    }
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    .tulip {
+      position: absolute;
+      bottom: -60px;
+      font-size: 24px;
+      animation: growTulip 6s ease forwards;
+      opacity: 0;
+    }
+
+    .rose {
+      position: absolute;
+      font-size: 80px;
+      opacity: 0;
+      animation: bloomRose 4s ease forwards;
+      animation-delay: 11s;
+      z-index: 6;
+    }
+
+    @keyframes growTulip {
+      0% {
+        transform: translateY(0) scale(0.3);
+        opacity: 0;
+      }
+      30% {
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(-110vh) scale(1.2);
+        opacity: 1;
+      }
+    }
+
+    @keyframes fadeOut {
+      to {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+    }
+
+    @keyframes bloomRose {
+      0% {
+        transform: scale(0.2);
+        opacity: 0;
+      }
+      60% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="center-text">
+    <h1>Happy Rose Day 🌹</h1>
+    <h2>I love you so much wifeyyyyyyyyyyyyy ❤️🙈</h2>
+  </div>
+
+  <div class="rose">🌹</div>
+
+  <script>
+    // Create blooming tulips
+    for (let i = 0; i < 45; i++) {
+      const tulip = document.createElement("div");
+      tulip.className = "tulip";
+      tulip.innerHTML = "🌷";
+      tulip.style.left = Math.random() * 100 + "vw";
+      tulip.style.animationDelay = Math.random() * 2 + "s";
+      tulip.style.fontSize = Math.random() * 18 + 20 + "px";
+      document.body.appendChild(tulip);
+    }
+  </script>
+
+</body>
+</html>
